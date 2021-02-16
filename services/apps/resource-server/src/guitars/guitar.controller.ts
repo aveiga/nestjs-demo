@@ -1,4 +1,12 @@
-import { Controller, Get, Logger, Param, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Logger,
+  Param,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import { Scopes } from '@app/auth';
 import { Guitar } from './guitar.model';
 import { GuitarService } from './guitar.service';
@@ -15,6 +23,12 @@ export class GuitarController {
     this.logger.log(`Calling ${this.getGuitars.name}`);
 
     return this.guitarsService.findAll();
+  }
+
+  @Post()
+  @Scopes('email')
+  postGuitar(@Body() guitar: Guitar) {
+    this.guitarsService.insertGuitar(guitar);
   }
 
   @Get(':brand')

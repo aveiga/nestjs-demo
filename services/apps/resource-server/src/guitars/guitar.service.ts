@@ -15,4 +15,8 @@ export class GuitarService {
   findByBrand(brand: String): Array<Guitar> {
     return this.guitars.filter((e) => e.brand === brand);
   }
+
+  insertGuitar(guitar: Guitar) {
+    return this.guitars.push(guitar);
+  }
 }
