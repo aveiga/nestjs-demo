@@ -28,6 +28,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/auth/tsconfig.lib.json"
       }
+    },
+    "error-handler": {
+      "type": "library",
+      "root": "libs/error-handler",
+      "entryFile": "index",
+      "sourceRoot": "libs/error-handler/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/error-handler/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

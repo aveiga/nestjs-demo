@@ -78,7 +78,9 @@
       "@app/auth-module/(.*)": "<rootDir>/libs/auth-module/src/$1",
       "@app/auth-module": "<rootDir>/libs/auth-module/src",
       "@app/auth/(.*)": "<rootDir>/libs/auth/src/$1",
-      "@app/auth": "<rootDir>/libs/auth/src"
+      "@app/auth": "<rootDir>/libs/auth/src",
+      "@app/error-handler/(.*)": "<rootDir>/libs/error-handler/src/$1",
+      "@app/error-handler": "<rootDir>/libs/error-handler/src"
     }
   }
 }

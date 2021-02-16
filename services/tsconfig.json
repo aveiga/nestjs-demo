@@ -23,6 +23,12 @@
       ],
       "@app/auth/*": [
         "libs/auth/src/*"
+      ],
+      "@app/error-handler": [
+        "libs/error-handler/src"
+      ],
+      "@app/error-handler/*": [
+        "libs/error-handler/src/*"
       ]
     }
   }

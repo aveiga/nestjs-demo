@@ -21,6 +21,36 @@ docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.i
 - importing the AuthModule will enforce authorization (no zero-scope endpoints)
 - `@Scopes` decorator is to be used to protected a REST endpoint
 
+### Error Handling
+
+- Import the HttpExceptionFilter from the @app/error-handler module
+
+```
+...
+import { HttpExceptionFilter } from '@app/error-handler';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.useGlobalFilters(new HttpExceptionFilter());
+  await app.listen(process.env.PORT);
+}
+bootstrap();
+```
+
+- If you need to access the filter via Dependency Injection, add it to the App Module imports
+
+```
+...
+import { HttpExceptionFilter } from '@app/error-handler';
+
+@Module({
+  imports: [GuitarModule, AuthModule, HttpExceptionFilter],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
+
 ## To Do
 
 ###
@@ -39,20 +69,20 @@ docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.i
 - ✅ Authentication
 - ✅ Authorization
 - Rate Limiting
-- Logging
-- Error Handling
+- ✅ Logging
+- ✅ REST Error Handling
 - Testing
 - API Documentation
 - Monitoring
 
 ### Frontends
 
-- ✅ REST
+- REST
 - Logging
-- Error Handling
+- REST Error Handling
 - Testing
-- ✅ Authentication
-- ✅ Authorization
+- Authentication
+- Authorization
 - API Documentation
 - Monitoring
 - Messaging using RabbitMQ
@@ -67,7 +97,7 @@ docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.i
 - Authentication
 - Rate Limmiting
 - Logging
-- Error Handling
+- REST Error Handling
 - Testing
 - Websockets
 - Developing and serving UI dashboards and/or pages
