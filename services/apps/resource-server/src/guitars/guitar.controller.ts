@@ -1,5 +1,5 @@
 import { Controller, Get, Param, UseGuards } from '@nestjs/common';
-import { Scopes } from 'src/auth/scopes.decorator';
+import { Scopes } from '../auth/scopes.decorator';
 import { Guitar } from './guitar.model';
 import { GuitarService } from './guitar.service';
 
