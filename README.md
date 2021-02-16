@@ -62,7 +62,7 @@ export class AppModule {}
 - ✅ REST
 - Messaging using RabbitMQ
 - Bulk APIs
-- Input Validation
+- ✅ Input Validation
 - Feign Client
 - Database Versioning
 - ABAC
