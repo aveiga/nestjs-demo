@@ -71,6 +71,7 @@ export class AppModule {}
 - Rate Limiting
 - ✅ Logging
 - ✅ REST Error Handling
+- Service Discovery with Eureka
 - Testing
 - API Documentation
 - Monitoring
@@ -85,6 +86,7 @@ export class AppModule {}
 - Authorization
 - API Documentation
 - Monitoring
+- Service Discovery with Eureka
 - Messaging using RabbitMQ
 - Websockets
 - Developing and serving UI fragments
@@ -99,6 +101,7 @@ export class AppModule {}
 - Logging
 - REST Error Handling
 - Testing
+- Service Discovery with Eureka
 - Websockets
 - Developing and serving UI dashboards and/or pages
 - API Documentation
