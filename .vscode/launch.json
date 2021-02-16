@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/services/resource-server/src/main.ts",
+      "preLaunchTask": "tsc: watch - services/resource-server/tsconfig.build.json",
+      "outFiles": ["${workspaceFolder}/services/resource-server/dist/**/*.js"],
+      "skipFiles": [
+        "${workspaceFolder}/services/resource-server/node_modules/**/*.js",
+        "<node_internals>/**/*.js"
+      ]
+    },
+    {
+      "name": "Attach by Process ID",
+      "processId": "${command:PickProcess}",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node",
+      "restart": true
+    }
+  ]
+}

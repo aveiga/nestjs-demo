@@ -8,4 +8,4 @@ docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.i
 
 ## Resources
 
-- Keycloak
+- Keycloak on Docker: https://www.keycloak.org/getting-started/getting-started-docker

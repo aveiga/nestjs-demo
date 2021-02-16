@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start:dev",
+      "path": "services/resource-server/",
+      "problemMatcher": [],
+      "label": "npm: start:dev - services/resource-server",
+      "detail": "nest start --watch"
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "services/resource-server/tsconfig.build.json",
+      "option": "watch",
+      "problemMatcher": ["$tsc-watch"],
+      "group": "build",
+      "label": "tsc: watch - services/resource-server/tsconfig.build.json"
+    }
+  ]
+}
