@@ -18,7 +18,7 @@ export class GuitarController {
   constructor(private readonly guitarsService: GuitarService) {}
 
   @Get()
-  @Scopes('cenassas', 'email')
+  @Scopes('cenassas', 'alarmmgr-sp.admin')
   getGuitars(): Array<Guitar> {
     this.logger.log(`Calling ${this.getGuitars.name}`);
 

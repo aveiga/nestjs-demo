@@ -11,7 +11,7 @@ import { AuthService } from './auth.service';
 @Injectable()
 export class ScopesGuard implements CanActivate {
   tokenValidationURL: string = `${process.env.AUTH_URL}/realms/${
-    process.env.REALM || process.env.DEFAULT_REAL
+    process.env.REALM || process.env.DEFAULT_REALM
   }/protocol/openid-connect/token/introspect`;
 
   constructor(

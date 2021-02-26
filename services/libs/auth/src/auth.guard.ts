@@ -11,11 +11,10 @@ import { AuthService } from './auth.service';
 @Injectable()
 export class AuthGuard implements CanActivate {
   tokenValidationURL: string = `${process.env.AUTH_URL}/realms/${
-    process.env.REALM || process.env.DEFAULT_REAL
+    process.env.REALM || process.env.DEFAULT_REALM
   }/protocol/openid-connect/token/introspect`;
 
   constructor(
-    private httpService: HttpService,
     private readonly authService: AuthService,
   ) {}
 

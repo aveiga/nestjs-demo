@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class AuthService {
   tokenValidationURL: string = `${process.env.AUTH_URL}/realms/${
-    process.env.REALM || process.env.DEFAULT_REAL
+    process.env.REALM || process.env.DEFAULT_REALM
   }/protocol/openid-connect/token/introspect`;
 
   constructor(private httpService: HttpService) {}
