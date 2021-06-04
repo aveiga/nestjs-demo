@@ -60,8 +60,10 @@ export class AppModule {}
 ### Resource Servers
 
 - ✅ REST
+- HTTPS
 - Messaging using RabbitMQ
 - Bulk APIs
+- Persistence using PostgreSQL
 - ✅ Input Validation
 - Feign Client
 - Database Versioning
@@ -79,8 +81,10 @@ export class AppModule {}
 ### Frontends
 
 - REST
+- HTTPS
 - Logging
 - REST Error Handling
+- Persistence using PostgreSQL
 - Testing
 - Authentication
 - Authorization
